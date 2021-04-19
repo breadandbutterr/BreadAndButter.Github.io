@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+/* Extra small devices (phones, 600px and down) */
+html {height: 100%;}
+body {
+    background: url("../Pics/big.png")center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-family: 'open sans condensed', sans-serif;
+    height: 100%;
+    background-color: rgba(240,207,146,1);
+    color: #f5f5f5;
+    letter-spacing: 1.5px;
+}
+p {
+    font-size: 1.5em;
+    border-radius: 10px;
+    background-color: rgba(245, 245, 245, 1);
+    width: 25%;
+}
+.profile-pic{
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  border: white solid 3px;
+}
+.logos{
+  width: 75%;
+  height: 100%;
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .profile-pic{
+    width: 150px;
+    height: 150px;
+  }
+  .logos{width: 50%;}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .logos{width: 40%;}
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .logos{width: 30%;}
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .logos{width: 20%;}
+}
