@@ -3,12 +3,12 @@
 /* Extra small devices (phones, 600px and down) */
 html {height: 100%;}
 body {
-    background: url("../Pics/big.png")center center;
+    background: url("../Pics/Banner-Final.jpg")center center;
     background-repeat: no-repeat;
     background-size: contain;
     font-family: 'open sans condensed', sans-serif;
     height: 100%;
-    background-color: rgba(240,207,146,1);
+    background-color: rgba(241, 206, 102, 1);
     color: #f5f5f5;
     letter-spacing: 1.5px;
 }
@@ -22,7 +22,7 @@ body {
   width: 90%;
   height: 90%;
   border-radius: 10px;
-  background-color: rgba(245, 245, 245, 1);
+  background-color: rgba(245, 245, 245, 0.8);
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
