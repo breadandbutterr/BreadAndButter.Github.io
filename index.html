@@ -17,7 +17,7 @@
 	<body>
   	<main class="h-100">
     	<!--LINKS-->
-      <div class="container text-center">
+      <div class="container text-center h-100">
       	<div class="row">
         	<div class="col-12 align-self-end">
 						<br>
@@ -27,8 +27,10 @@
 						<br>
           </div>
 				</div>
-				<div id="twitchplayer">
-
+				<div class="row h-25">
+					<div class="offset-1 col-5 offset-lg-2 col-lg-8">
+						<div id="twitchplayer" class="h-100"></div>
+					</div>
 				</div>
 
   			<div class="row">
@@ -56,8 +58,8 @@
 
 		<script type="text/javascript">
 		  var options = {
-		    width: 800,
-		    height: 600,
+		    width: "90%",
+		    height: "90%",
 		    channel: "breadandbutterr",
 		    // only needed if your site is also embedded on embed.example.com and othersite.example.com
 		    parent: ["localhost"]
