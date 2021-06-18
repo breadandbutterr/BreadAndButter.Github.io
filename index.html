@@ -4,14 +4,15 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="description" content="BreadandButterr Socials">
-		<meta name="author" content="BreadandButterr">
+		<meta name="description" content="Portfolio of my work in Web Development.">
+		<meta name="author" content="Brett Sloan">
 		<title>BreadAndButterr ¯\_(ツ)_/¯</title>
 		<link rel="icon" type="image/png" href="img/favicon.png">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 		<link rel="stylesheet" href="CSS/main.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
 		<script src="https://kit.fontawesome.com/54e22d9674.js" crossorigin="anonymous"></script>
+				<script src= "https://player.twitch.tv/js/embed/v1.js"></script>
 	</head>
 	<body>
   	<main class="h-100">
@@ -26,6 +27,10 @@
 						<br>
           </div>
 				</div>
+				<div id="twitchplayer">
+
+				</div>
+
   			<div class="row">
 					<div class="offset-1 col-5 offset-lg-2 col-lg-4"><a href="https://www.twitch.com/BreadAndButterr" target="_blank"><img class="logos" src="Pics/Twitch.wine.png"></img></a></div>
 				  <div class="col-5 col-lg-4"><a href="https://www.discord.gg/PWQdbKb" target="_blank"><img class="logos" src="Pics/Discord.wine.png"></img></a></div>
@@ -44,10 +49,21 @@
 				</div>
 			</div>
     </main>
-
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+		<script type="text/javascript">
+		  var options = {
+		    width: 800,
+		    height: 600,
+		    channel: "breadandbutterr",
+		    // only needed if your site is also embedded on embed.example.com and othersite.example.com
+		    parent: ["localhost"]
+		  };
+		  var player = new Twitch.Player("twitchplayer", options);
+		  player.setVolume(0.5);
+		</script>
 		</body>
 </html>
