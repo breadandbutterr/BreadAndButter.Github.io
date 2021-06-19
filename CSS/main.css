@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
 
 /* Extra small devices (phones, 600px and down) */
-html {height: 200%;}
+html {height: 150%;}
 body {
     background: url("../Pics/Banner-Final.jpg")center center;
     background-repeat: no-repeat;
