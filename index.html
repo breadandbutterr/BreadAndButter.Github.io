@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="description" content="BreadandButterrs Socials">
+		<meta name="description" content="Portfolio of my work in Web Development.">
 		<meta name="author" content="Brett Sloan">
 		<title>BreadAndButterr ¯\_(ツ)_/¯</title>
 		<link rel="icon" type="image/png" href="img/favicon.png">
@@ -17,54 +17,46 @@
 	<body>
   	<main class="h-100">
     	<!--LINKS-->
-      <div class="container text-center h-100">
-      	<div class="row">
-        	<div class="col-12 align-self-end">
-						<br>
-						<br>
-						<img class="profile-pic" src="Pics/Profile.jpg"></img>
-						<br>
-						<br>
-          </div>
-				</div>
-				<div class="row h-25">
-					<div class="offset-1 col-5 offset-lg-2 col-lg-8">
-						<div id="twitchplayer" class="h-100"></div>
+      <div class="container text-center h-100" id="changeAtBreakpoint">
+				<div  class="row">
+					<div class="col-4">
+						<div class="row">
+							<div class="col-12 padding">
+								<img class="profile-pic" src="Pics/Profile.jpg"></img>
+							</div>
+							<div class="col-12 padding"><a href="https://www.twitch.com/BreadAndButterr" target="_blank"><img class="logos" src="Pics/Twitch.wine.png"></img></a></div>
+						</div>
 					</div>
-				</div>
-
-  			<div class="row">
-					<div class="offset-1 col-5 offset-lg-2 col-lg-4"><a href="https://www.twitch.com/BreadAndButterr" target="_blank"><img class="logos" src="Pics/Twitch.wine.png"></img></a></div>
-				  <div class="col-5 col-lg-4"><a href="https://www.discord.gg/PWQdbKb" target="_blank"><img class="logos" src="Pics/Discord.wine.png"></img></a></div>
-				</div>
-				<div class="row">
-				  <div class="offset-1 col-5 offset-lg-2 col-lg-4"><a href="https://www.tiktok.com/@brett.sloan" target="_blank"><img class="logos" src="Pics/TikTok.wine.png"></img></a></div>
-				  <div class="col-5 col-lg-4"><a href="https://www.youtube.com/channel/UCgVYeztya45NCFOd23MkJOg?sub_confirmation=1" target="_blank"><img class="logos" src="Pics/YouTube.wine.png"></img></a></div>
-				</div>
-				<div class="row">
-					<div class="offset-1 col-5 offset-lg-2 col-lg-4"><a href="https://www.twitter.com/Brettsloan" target="_blank"><img class="logos" src="Pics/Twitter.wine.png"></img></a></div>
-				  <div class="col-5 col-lg-4"><a href="https://www.instagram.com/brettsloan/" target="_blank"><img class="logos" src="Pics/Instagram.wine.png"></img></a></div>
-				</div>
-				<div class="row">
-				  <div class="offset-1 col-5 offset-lg-2 col-lg-4"><a href="https://www.chess.com/club/breadandbutterr" target="_blank"><img class="logos" src="Pics/Chess.png"></img></a></div>
-					<div class="col-5 col-lg-4"><a href="https://www.checkmategaming.com/tournament/cross-platform/chess" target="_blank"><img class="logos" src="Pics/cmg-logo.png"></img></a></div>
+					<div class="col-8 padding">
+						<div id="twitchplayer" class="twitchplayer"></div>
+					</div>
+					<div class="col-6 col-lg-4"><a href="https://www.discord.gg/PWQdbKb" target="_blank"><img class="logos" src="Pics/Discord.wine.png"></img></a></div>
+					<div class="col-6 col-lg-4"><a href="https://www.tiktok.com/@brett.sloan" target="_blank"><img class="logos" src="Pics/TikTok.wine.png"></img></a></div>
+					<div class="col-6 col-lg-4"><a href="https://www.youtube.com/channel/UCgVYeztya45NCFOd23MkJOg" target="_blank"><img class="logos" src="Pics/YouTube.wine.png"></img></a></div>
+					<div class="col-6 col-lg-4"><a href="https://www.twitter.com/Brettsloan" target="_blank"><img class="logos" src="Pics/Twitter.wine.png"></img></a></div>
+					<div class="col-6 col-lg-4"><a href="https://www.instagram.com/brettsloan/" target="_blank"><img class="logos" src="Pics/Instagram.wine.png"></img></a></div>
+					<div class="col-6 col-lg-4"><a href="https://www.chess.com/club/breadandbutterr" target="_blank"><img class="logos" src="Pics/Chess.png"></img></a></div>
 				</div>
 			</div>
-
-
-
-https://www.checkmategaming.com/tournament/cross-platform/chess
-
     </main>
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
 		<script type="text/javascript">
+			function myFunction(x) {
+				if (x.matches) { // If media query matches
+					document.getElementById("changeAtBreakpoint").innerHTML = "<div class='row'><div class='col-12 align-self-end'><br><br><img class='profile-pic' src='Pics/Profile.jpg'></img><br><br></div></div><div class='row h-25'><div class='col-12'><div id='twitchplayer' class='twitchplayer'></div></div></div><div class='row'><div class='col-6 col-lg-4'><a href='https://www.twitch.com/BreadAndButterr' target='_blank'><img class='logos' src='Pics/Twitch.wine.png'></img></a></div><div class='col-6 col-lg-4'><a href='https://www.discord.gg/PWQdbKb' target='_blank'><img class='logos' src='Pics/Discord.wine.png'></img></a></div><div class='col-6 col-lg-4'><a href='https://www.tiktok.com/@brett.sloan' target='_blank'><img class='logos' src='Pics/TikTok.wine.png'></img></a></div><div class='col-6 col-lg-4'><a href='https://www.youtube.com/channel/UCgVYeztya45NCFOd23MkJOg' target='_blank'><img class='logos' src='Pics/YouTube.wine.png'></img></a></div><div class='col-6 col-lg-4'><a href='https://www.twitter.com/Brettsloan' target='_blank'><img class='logos' src='Pics/Twitter.wine.png'></img></a></div><div class='col-6 col-lg-4'><a href='https://www.instagram.com/brettsloan/' target='_blank'><img class='logos' src='Pics/Instagram.wine.png'></img></a></div><div class='col-6 col-lg-4'><a href='https://www.chess.com/club/breadandbutterr' target='_blank'><img class='logos' src='Pics/Chess.png'></img></a></div></div></div>";
+				}
+			}
+
+			var x = window.matchMedia("(max-width: 992px)")
+			myFunction(x) // Call listener function at run time
+			x.addListener(myFunction) // Attach listener function on state changes
+
 		  var options = {
-		    width: "80%",
-		    height: "90%",
+		    width: "100%",
+		    height: "100%",
 		    channel: "breadandbutterr",
 		    // only needed if your site is also embedded on embed.example.com and othersite.example.com
 		    parent: ["localhost"]
