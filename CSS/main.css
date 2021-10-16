@@ -51,17 +51,18 @@ img:hover{
   overflow: hidden;
 }
 
-.tiktokplayer{
-  height: 900px;
-  width: 90%;
-  margin: 0 auto;
+.tiktok-embed{
+  height: 774px !important;
+  width: 90% !important;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 10px;
   overflow: hidden;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
 }
 
 .twitter-timeline{
-  height: 900px !important;
+  height: 774px !important;
   width: 90% !important;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 10px;
