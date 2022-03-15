@@ -45,17 +45,21 @@ img:hover{
   padding-bottom: 50px;
 }
 .twitchplayer{
-  height:150%;
-  width: 90%;
-  margin: 0 auto;
+  width: 100%;
+  height: 315px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+  overflow: hidden;
+}
+iframe{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 10px;
   overflow: hidden;
 }
 
 .tiktok-embed{
-  height: 774px !important;
-  width: 90% !important;
+  height: 100%;
+  width: 100%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 10px;
   overflow: hidden;
@@ -64,8 +68,8 @@ img:hover{
 }
 
 .twitter-timeline{
-  height: 774px !important;
-  width: 90% !important;
+  height: 100%;
+  width: 100%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 10px;
   overflow: hidden;
@@ -80,21 +84,94 @@ footer {
   background-color: rgba(221, 186, 82, 0.9);
 }
 i{
-  padding: 10px;
+  font-size: 25px !important;
+  padding: 5px;
   color: white;
   filter:drop-shadow(4px 2px 2px rgba(0, 0, 0, 0.2));
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.2), 1px -1px 1px rgba(0, 0, 0, 0.2), -1px 1px 1px rgba(0, 0, 0, 0.2), 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
+.fa-twitch{color: #9147FE;}
+.fa-youtube{color: #FF0101;}
+.fa-tiktok{color: #26FFFD;}
+.fa-user-astronaut{color: #46C7F0;}
+.fa-discord{color: #758DE0;}
+.fa-instagram{color:#F44E50;}
+.fa-twitter{color: #1DA1F2;}
+.fa-reddit{color: #FF4603;}
+h1{
+  position: relative;
+  color: white;
+  font-size: 2em;
+  text-align: left;
+  text-shadow: -2px -2px 1px #000, 2px -2px 1px #000, -2px 2px 1px #000, 2px 2px 1px #000;
+  filter:drop-shadow(3px 3px 5px rgba(0, 0, 0, 1));
+}
+#myBtn {
+  margin: auto;
+  right: 0;
+  display: none;
+  position: fixed;
+  bottom: 51px;
+
+  z-index: 99;
+  font-size:15px;
+  border: none;
+  outline: none;
+  background-color: rgba(221, 186, 82, 1);
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+}
+#myBtn:hover {
+  background-color: rgba(0,0,0,0.2);
+}
+
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
   .profile-pic{
     width: 150px;
     height: 150px;
   }
-  .twitchplayer{height:90%;}
+  .twitter-timeline{
+    height: 100%;
+    width: 100%;
+  }
+  .tiktok-embed{
+    height: 100%;
+    width: 100%;
+  }
+  i{
+    padding: 10px;
+    color: white;
+    filter:drop-shadow(4px 2px 2px rgba(0, 0, 0, 0.2));
+    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.2), 1px -1px 1px rgba(0, 0, 0, 0.2), -1px 1px 1px rgba(0, 0, 0, 0.2), 1px 1px 1px rgba(0, 0, 0, 0.2);
+  }
+  #myBtn {
+    display: none;
+    position: fixed;
+    bottom: 51px;
+    right: 100px;
+    z-index: 99;
+    font-size: 35px;
+    border: none;
+    outline: none;
+    background-color: rgba(221, 186, 82, 1);
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  #myBtn:hover {
+    background-color: rgba(0,0,0,0.2);
+  }
+
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   html {height: 100%;}
-  .logos{width: 75%;}
+  .logos{width: 100%;}
+  h1{font-size: 4em;}
 }
