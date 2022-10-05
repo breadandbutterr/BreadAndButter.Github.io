@@ -1,22 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@font-face {
+    font-family: 'retro_cool';
+    src: url('../Font/retrocoolregular-webfont.woff') format('woff');
+         /* url('../Font/retrocoolregular-webfont.ttf') format('truetype'); */
+    font-weight: normal;
+    font-style: normal;
+}
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap'); */
+
 
 /* Extra small devices (phones, 600px and down) */
 html {
-  background: hsla(45, 83%, 67%, 1);
-  background: linear-gradient(315deg, hsla(45, 83%, 67%, 1) 0%, hsla(45, 68%, 83%, 1) 100%);
-  background: -moz-linear-gradient(315deg, hsla(45, 83%, 67%, 1) 0%, hsla(45, 68%, 83%, 1) 100%);
-  background: -webkit-linear-gradient(315deg, hsla(45, 83%, 67%, 1) 0%, hsla(45, 68%, 83%, 1) 100%);
-
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F1CE66", endColorstr="#F1E2B6", GradientType=1 );
+  background: hsla(31, 97%, 53%, 1);
+  background: linear-gradient(135deg, hsla(31, 97%, 53%, 1) 0%, hsla(45, 83%, 67%, 1) 100%);
+  background: -moz-linear-gradient(135deg, hsla(31, 97%, 53%, 1) 0%, hsla(45, 83%, 67%, 1) 100%);
+  background: -webkit-linear-gradient(135deg, hsla(31, 97%, 53%, 1) 0%, hsla(45, 83%, 67%, 1) 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FC8B13", endColorstr="#F1CE66", GradientType=1 );
 }
 body {
   font-family: 'open sans condensed', sans-serif;
-  background: hsla(45, 83%, 67%, 1);
-  background: linear-gradient(315deg, hsla(45, 83%, 67%, 1) 0%, hsla(45, 68%, 83%, 1) 100%);
-  background: -moz-linear-gradient(315deg, hsla(45, 83%, 67%, 1) 0%, hsla(45, 68%, 83%, 1) 100%);
-  background: -webkit-linear-gradient(315deg, hsla(45, 83%, 67%, 1) 0%, hsla(45, 68%, 83%, 1) 100%);
-
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F1CE66", endColorstr="#F1E2B6", GradientType=1 );
+  background: hsla(31, 97%, 53%, 1);
+  background: linear-gradient(135deg, hsla(31, 97%, 53%, 1) 0%, hsla(45, 83%, 67%, 1) 100%);
+  background: -moz-linear-gradient(135deg, hsla(31, 97%, 53%, 1) 0%, hsla(45, 83%, 67%, 1) 100%);
+  background: -webkit-linear-gradient(135deg, hsla(31, 97%, 53%, 1) 0%, hsla(45, 83%, 67%, 1) 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FC8B13", endColorstr="#F1CE66", GradientType=1 );
   color: #f5f5f5;
   letter-spacing: 1.5px;
   min-height: 100%;
@@ -92,12 +98,11 @@ footer {
   bottom: 0;
   width: 100%;
   color: white;
-  background: hsla(45, 83%, 67%, 1);
-  background: linear-gradient(315deg, hsla(45, 83%, 67%, 1) 0%, hsla(45, 68%, 83%, 1) 100%);
-  background: -moz-linear-gradient(315deg, hsla(45, 83%, 67%, 1) 0%, hsla(45, 68%, 83%, 1) 100%);
-  background: -webkit-linear-gradient(315deg, hsla(45, 83%, 67%, 1) 0%, hsla(45, 68%, 83%, 1) 100%);
-
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F1CE66", endColorstr="#F1E2B6", GradientType=1 );
+  background: hsla(31, 97%, 53%, 1);
+  background: linear-gradient(135deg, hsla(31, 97%, 53%, 1) 0%, hsla(45, 83%, 67%, 1) 100%);
+  background: -moz-linear-gradient(135deg, hsla(31, 97%, 53%, 1) 0%, hsla(45, 83%, 67%, 1) 100%);
+  background: -webkit-linear-gradient(135deg, hsla(31, 97%, 53%, 1) 0%, hsla(45, 83%, 67%, 1) 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FC8B13", endColorstr="#F1CE66", GradientType=1 );
 }
 i{
   font-size: 25px !important;
@@ -105,6 +110,9 @@ i{
   color: white;
   filter:drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.2));
   text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.2), 1px -1px 1px rgba(0, 0, 0, 0.2), -1px 1px 1px rgba(0, 0, 0, 0.2), 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+i:hover{
+  transform: scale(1.1);
 }
 .fa-twitch{color: #9147FE;}
 .fa-youtube{color: #FF0101;}
@@ -115,35 +123,43 @@ i{
 .fa-twitter{color: #1DA1F2;}
 .fa-reddit{color: #FF4603;}
 h1{
-  font-family: 'retro_coolregular', arial, sans-serif;
+  font-family: 'retro_cool';
   font-weight:normal;
   font-style:normal;
   position: relative;
-  color: white;
+  color: #a3542a;
   font-size: 2em;
   text-align: left;
-  text-shadow: -2px -2px 1px #000, 2px -2px 1px #000, -2px 2px 1px #000, 2px 2px 1px #000;
-  filter:drop-shadow(0px 0px 1px rgba(0, 0, 0, 1));
+  /* text-shadow: -2px -2px 1px #000, 2px -2px 1px #000, -2px 2px 1px #000, 2px 2px 1px #000; */
+  filter:drop-shadow(2px 2px 2px rgba(0, 0, 0, 1));
 }
 #myBtn {
   margin: auto;
   right: 0;
   display: none;
   position: fixed;
-  bottom: 51px;
-
+  bottom: 61px;
+  font-family: 'retro_cool';
+  font-weight:normal;
+  font-style:normal;
   z-index: 99;
   font-size:15px;
   border: none;
   outline: none;
-  background-color: rgba(221, 186, 82, 1);
-  color: white;
+  background-color: #F1CE66;
+  color: #a3542a;
   cursor: pointer;
   padding: 10px;
   border-radius: 10px;
+  box-shadow: 2px 2px 3px #000;
+
 }
 #myBtn:hover {
-  background-color: rgba(0,0,0,0.2);
+  background-color: #F1CE66;
+    transform: scale(1.1);
+}
+#myBtn section {
+  filter:drop-shadow(2px 2px 2px rgba(0, 0, 0, 1));
 }
 
 
@@ -170,21 +186,25 @@ h1{
   #myBtn {
     display: none;
     position: fixed;
-    bottom: 51px;
+    bottom: 61px;
     right: 100px;
     z-index: 99;
-    font-size: 35px;
+    font-size: 50px;
     border: none;
     outline: none;
-    background-color: rgba(221, 186, 82, 0.8);
-    color: white;
+    background-color: #F1CE66;
+    color: #a3542a;
     cursor: pointer;
-    padding: 5px;
+    padding: 10px;
     border-radius: 10px;
+    box-shadow: 2px 2px 3px #000;
+
   }
   #myBtn:hover {
-    background-color: rgba(221, 186, 82, 1);
+    background-color: #F1CE66;
+    transform: scale(1.1);
   }
+
 
 }
 
@@ -192,5 +212,5 @@ h1{
 @media only screen and (min-width: 992px) {
   html {height: 100%;}
   .logos{width: 100%;}
-  h1{font-size: 4em;}
+  h1{font-size: 6em;}
 }
