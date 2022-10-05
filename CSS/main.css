@@ -2,11 +2,21 @@
 
 /* Extra small devices (phones, 600px and down) */
 html {
-    background-color: rgba(241, 206, 102, 1);
+  background: hsla(45, 83%, 67%, 1);
+  background: linear-gradient(315deg, hsla(45, 83%, 67%, 1) 0%, hsla(45, 68%, 83%, 1) 100%);
+  background: -moz-linear-gradient(315deg, hsla(45, 83%, 67%, 1) 0%, hsla(45, 68%, 83%, 1) 100%);
+  background: -webkit-linear-gradient(315deg, hsla(45, 83%, 67%, 1) 0%, hsla(45, 68%, 83%, 1) 100%);
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F1CE66", endColorstr="#F1E2B6", GradientType=1 );
 }
 body {
   font-family: 'open sans condensed', sans-serif;
-  background-color: rgba(241, 206, 102, 1);
+  background: hsla(45, 83%, 67%, 1);
+  background: linear-gradient(315deg, hsla(45, 83%, 67%, 1) 0%, hsla(45, 68%, 83%, 1) 100%);
+  background: -moz-linear-gradient(315deg, hsla(45, 83%, 67%, 1) 0%, hsla(45, 68%, 83%, 1) 100%);
+  background: -webkit-linear-gradient(315deg, hsla(45, 83%, 67%, 1) 0%, hsla(45, 68%, 83%, 1) 100%);
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F1CE66", endColorstr="#F1E2B6", GradientType=1 );
   color: #f5f5f5;
   letter-spacing: 1.5px;
   min-height: 100%;
@@ -28,15 +38,16 @@ body {
   width: 90%;
   height: 90%;
   border-radius: 10px;
-  background-color: rgba(245, 245, 245, 0.9);
+  /* background-color: rgba(245, 245, 245, 0.9); */
 }
 img{
   transition: all .2s ease-in-out;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  filter: drop-shadow(2px 2px 3px #333);
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 }
 img:hover{
-  background-color: rgba(245, 245, 245, 1);
-  transform: scale(1.1);
+  /* background-color: rgba(245, 245, 245, 1); */
+  transform: scale(1.2);
 }
 .padding{
   padding-top: 10px;
@@ -81,13 +92,18 @@ footer {
   bottom: 0;
   width: 100%;
   color: white;
-  background-color: rgba(221, 186, 82, 0.9);
+  background: hsla(45, 83%, 67%, 1);
+  background: linear-gradient(315deg, hsla(45, 83%, 67%, 1) 0%, hsla(45, 68%, 83%, 1) 100%);
+  background: -moz-linear-gradient(315deg, hsla(45, 83%, 67%, 1) 0%, hsla(45, 68%, 83%, 1) 100%);
+  background: -webkit-linear-gradient(315deg, hsla(45, 83%, 67%, 1) 0%, hsla(45, 68%, 83%, 1) 100%);
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F1CE66", endColorstr="#F1E2B6", GradientType=1 );
 }
 i{
   font-size: 25px !important;
   padding: 5px;
   color: white;
-  filter:drop-shadow(4px 2px 2px rgba(0, 0, 0, 0.2));
+  filter:drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.2));
   text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.2), 1px -1px 1px rgba(0, 0, 0, 0.2), -1px 1px 1px rgba(0, 0, 0, 0.2), 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
 .fa-twitch{color: #9147FE;}
@@ -99,12 +115,15 @@ i{
 .fa-twitter{color: #1DA1F2;}
 .fa-reddit{color: #FF4603;}
 h1{
+  font-family: 'CustomFont', retro_coolregular, sans-serif;
+  font-weight:normal;
+  font-style:normal;
   position: relative;
   color: white;
   font-size: 2em;
   text-align: left;
   text-shadow: -2px -2px 1px #000, 2px -2px 1px #000, -2px 2px 1px #000, 2px 2px 1px #000;
-  filter:drop-shadow(3px 3px 5px rgba(0, 0, 0, 1));
+  filter:drop-shadow(0px 0px 1px rgba(0, 0, 0, 1));
 }
 #myBtn {
   margin: auto;
@@ -157,14 +176,14 @@ h1{
     font-size: 35px;
     border: none;
     outline: none;
-    background-color: rgba(221, 186, 82, 1);
+    background-color: rgba(221, 186, 82, 0.8);
     color: white;
     cursor: pointer;
-    padding: 10px;
+    padding: 5px;
     border-radius: 10px;
   }
   #myBtn:hover {
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(221, 186, 82, 1);
   }
 
 }
