@@ -128,7 +128,7 @@ h1{
   font-style:normal;
   position: relative;
   color: #a3542a;
-  font-size: 2em;
+  font-size: 4em;
   text-align: center;
   /* text-shadow: -2px -2px 1px #000, 2px -2px 1px #000, -2px 2px 1px #000, 2px 2px 1px #000; */
   filter:drop-shadow(2px 2px 2px rgba(0, 0, 0, 1));
@@ -143,10 +143,10 @@ h1{
   font-weight:normal;
   font-style:normal;
   z-index: 99;
-  font-size:15px;
+  font-size:25px;
   border: none;
   outline: none;
-  background-color: #F1CE66;
+  background-color: rgba(0,0,0,0);
   color: #a3542a;
   cursor: pointer;
   padding: 10px;
@@ -192,7 +192,7 @@ h1{
     font-size: 50px;
     border: none;
     outline: none;
-    background-color: #F1CE66;
+    background-color: rgba(0,0,0,0);
     color: #a3542a;
     cursor: pointer;
     padding: 10px;
