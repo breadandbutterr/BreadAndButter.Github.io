@@ -15,12 +15,11 @@
 		<script src= 'https://player.twitch.tv/js/embed/v1.js'></script>
 	</head>
 	<body>
-  		<main class='container padding-bottom'>
-			<button onclick="topFunction()" id="myBtn" title="Go to top"><section>Top</section></button>
+		<main class='container padding-bottom'>
+			<button onclick="topFunction()" id="myBtn" title="Go to top"><section>Back to Top</section></button>
+			<!--LINKS-->
 
-    		<!--LINKS-->
-
-      			<div id='changeAtBreakpoint'>
+			<div id='changeAtBreakpoint'>
 				<div class='row text-center'>
 					<div class='col-12 padding'>
 						<br>
@@ -67,29 +66,29 @@
 					<div class='col-12 col-md-6' style="height:100%;">
 						<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@brett.sloan/video/7145203082681535750" data-video-id="7145203082681535750" style="max-width: 605px;min-width: 325px;" >
 							 <section></section>
-						 </blockquote>
+						</blockquote>
 					</div>
 				</div>
 				<footer>
-  					<div class='text-center'>
+					<div class='text-center'>
 						<a href='https://www.twitch.com/BreadAndButterr' target='_blank'><i class='fab fa-twitch fa-2x'></i></a>
 						<a href='https://www.youtube.com/c/BreadandButterrYT?sub_confirmation=1' target='_blank'><i class='fab fa-youtube fa-2x'></i></a>
 						<a href='https://www.tiktok.com/@brett.sloan' target='_blank'><i class='fab fa-tiktok fa-2x'></i></a>
 						<a href='https://www.discord.gg/PWQdbKb' target='_blank'><i class='fab fa-discord fa-2x'></i></a>
 						<a href='https://www.twitter.com/Brettsloan' target='_blank'><i class='fab fa-twitter fa-2x'></i></a>
-  						<a href='https://www.reddit.com/r/BreadAndButterr/' target='_blank'><i class='fab fa-reddit fa-2x'></i></a>
+						<a href='https://www.reddit.com/r/BreadAndButterr/' target='_blank'><i class='fab fa-reddit fa-2x'></i></a>
 						<a href='https://www.instagram.com/brettsloan/' target='_blank'><i class='fab fa-instagram fa-2x'></i></a>
 						<a href='https://www.ko-fi.com/breadandbutterr' target="_blank"><i class='fa fa-coffee fa-2x'></i></a>
-  					</div>
+					</div>
 				</footer>
 			</div>
-    	</main>
+		</main>
 		<script src='https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' crossorigin='anonymous'></script>
 		<script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>
 		<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous'></script>
 		<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js' integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl' crossorigin='anonymous'></script>
 		<script async src='http://platform.twitter.com/widgets.js' charset='utf-8'></script>
-	  	<script async src='https://www.tiktok.com/embed.js'></script>
+		<script async src='https://www.tiktok.com/embed.js'></script>
 		<script type='text/javascript'>
 
 			//Get the button
@@ -118,9 +117,8 @@
 		    // only needed if your site is also embedded on embed.example.com and othersite.example.com
 		    parent: ['localhost']
 		  };
-		    new Twitch.Player("twitch-embed", {
-				video: "1229986143"
-			});
+		  var player = new Twitch.Player('twitchplayer', options);
+		  player.setVolume(0.5);
 
 		</script>
 	</body>

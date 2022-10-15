@@ -59,7 +59,7 @@ body {
     transform: rotate(0deg) scale(1);
   }
   to {
-    transform: rotate(359deg) scale(25);
+    transform: rotate(359deg) scale(100);
   }
 }
 .shadow {
@@ -124,10 +124,10 @@ footer {
   bottom: 0;
   width: 100%;
   color: white;
-  background: hsla(31, 97%, 53%, 1);
-  background: linear-gradient(135deg, hsla(31, 97%, 53%, 1) 0%, hsla(45, 83%, 67%, 1) 100%);
-  background: -moz-linear-gradient(135deg, hsla(31, 97%, 53%, 1) 0%, hsla(45, 83%, 67%, 1) 100%);
-  background: -webkit-linear-gradient(135deg, hsla(31, 97%, 53%, 1) 0%, hsla(45, 83%, 67%, 1) 100%);
+  background: hsla(31, 97%, 53%, 0.7);
+  background: linear-gradient(135deg, hsla(31, 97%, 53%, 0.7) 0%, hsla(45, 83%, 67%, 0.7) 100%);
+  background: -moz-linear-gradient(135deg, hsla(31, 97%, 53%, 0.7) 0%, hsla(45, 83%, 67%, 0.7) 100%);
+  background: -webkit-linear-gradient(135deg, hsla(31, 97%, 53%, 0.7) 0%, hsla(45, 83%, 67%, 0.7) 100%);
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FC8B13", endColorstr="#F1CE66", GradientType=1 );
 }
 i{
@@ -175,14 +175,15 @@ h1{
   background-color: rgba(0,0,0,0);
   color: #a3542a;
   cursor: pointer;
-  padding: 10px;
+  padding: 0px 0px 0px 0px !important;
   border-radius: 10px;
-  box-shadow: 2px 2px 3px #000;
+
 
 }
 #myBtn:hover {
-  background-color: #F1CE66;
+  background-color: hsla(45, 83%, 67%, 0.3);
     transform: scale(1.1);
+    box-shadow: 2px 2px 3px #000;
 }
 #myBtn section {
   filter:drop-shadow(2px 2px 2px rgba(0, 0, 0, 1));
@@ -213,7 +214,7 @@ h1{
     display: none;
     position: fixed;
     bottom: 61px;
-    right: 100px;
+    right: 50px;
     z-index: 99;
     font-size: 50px;
     border: none;
@@ -221,14 +222,15 @@ h1{
     background-color: rgba(0,0,0,0);
     color: #a3542a;
     cursor: pointer;
-    padding: 10px;
+    padding: 0px 10px 0px 10px !important;
     border-radius: 10px;
-    box-shadow: 2px 2px 3px #000;
+
 
   }
   #myBtn:hover {
-    background-color: #F1CE66;
+    background-color: hsla(45, 83%, 67%, 0.3);
     transform: scale(1.1);
+    box-shadow: 2px 2px 3px #000;
   }
 
 
