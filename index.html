@@ -118,8 +118,9 @@
 		    // only needed if your site is also embedded on embed.example.com and othersite.example.com
 		    parent: ['localhost']
 		  };
-		  var player = new Twitch.Player('twitchplayer', options);
-		  player.setVolume(0.5);
+		    new Twitch.Player("twitch-embed", {
+				video: "1229986143"
+			});
 
 		</script>
 	</body>
