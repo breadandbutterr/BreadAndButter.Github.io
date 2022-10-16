@@ -1,91 +1,73 @@
-@font-face {
-    font-family: 'retro_cool';
-    src: url('../Font/retrocoolregular-webfont.woff') format('woff');
-         /* url('../Font/retrocoolregular-webfont.ttf') format('truetype'); */
-    font-weight: normal;
-    font-style: normal;
-}
-/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap'); */
+/* IMPORTS */
+@font-face {font-family: 'retro_cool';src: url('../Font/retrocoolregular-webfont.woff') format('woff');font-weight: normal;font-style: normal;}
 
 
-/* Extra small devices (phones, 600px and down) */
-html {
-  background: hsla(31, 97%, 53%, 1);
-  background: linear-gradient(135deg, hsla(31, 97%, 53%, 1) 0%, hsla(45, 83%, 67%, 1) 100%);
-  background: -moz-linear-gradient(135deg, hsla(31, 97%, 53%, 1) 0%, hsla(45, 83%, 67%, 1) 100%);
-  background: -webkit-linear-gradient(135deg, hsla(31, 97%, 53%, 1) 0%, hsla(45, 83%, 67%, 1) 100%);
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FC8B13", endColorstr="#F1CE66", GradientType=1 );
-}
+/* EXTRA SMALL DEVICES (phones, 600px and down) */
 body {
   font-family: 'open sans condensed', sans-serif;
-  background: hsla(31, 97%, 53%, 1);
-  background: linear-gradient(135deg, hsla(31, 97%, 53%, 1) 0%, hsla(45, 83%, 67%, 1) 100%);
-  background: -moz-linear-gradient(135deg, hsla(31, 97%, 53%, 1) 0%, hsla(45, 83%, 67%, 1) 100%);
-  background: -webkit-linear-gradient(135deg, hsla(31, 97%, 53%, 1) 0%, hsla(45, 83%, 67%, 1) 100%);
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FC8B13", endColorstr="#F1CE66", GradientType=1 );
   color: #f5f5f5;
   letter-spacing: 1.5px;
   min-height: 100%;
+  background: hsla(31, 97%, 53%, 1);
+  background: linear-gradient(135deg, hsla(31, 97%, 53%, 1) 0%, hsla(45, 83%, 67%, 1) 100%);
+  background: -moz-linear-gradient(135deg, hsla(31, 97%, 53%, 1) 0%, hsla(45, 83%, 67%, 1) 100%);
+  background: -webkit-linear-gradient(135deg, hsla(31, 97%, 53%, 1) 0%, hsla(45, 83%, 67%, 1) 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FC8B13", endColorstr="#F1CE66", GradientType=1 );
+  padding-bottom: 50px;
 }
 
-#myVideo {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-}
+
+/* PROFILE PIC - Hover & Rotations */
 .profile-pic{
-  width: 125px;
-  height: 125px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
-  border: white solid 3px;
-  filter: drop-shadow(0px 0px 0px #333);
+  filter: drop-shadow(2px 2px 3px #333);
   animation: rotation 6s infinite linear;
 }
-.profile-pic:hover {
-  animation: rotationTwo 6s infinite linear;
-}
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
+.profile-pic:hover {animation: rotationTwo 6s infinite linear;}
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
   }
-  to {
-    transform: rotate(359deg);
+  @keyframes rotationTwo {
+    from {
+      transform: rotate(0deg) scale(1);
+    }
+    to {
+      transform: rotate(359deg) scale(100);
+    }
   }
-}
-@keyframes rotationTwo {
-  from {
-    transform: rotate(0deg) scale(1);
-  }
-  to {
-    transform: rotate(359deg) scale(100);
-  }
-}
-.shadow {
-  filter: drop-shadow(2px 2px 3px #333);
-}
-.logos{
-  width: 90%;
-  height: 90%;
-  border-radius: 10px;
-  /* background-color: rgba(245, 245, 245, 0.9); */
-}
-img{
-  transition: all .2s ease-in-out;
-  filter: drop-shadow(2px 2px 3px #333);
-  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
-}
-img:hover{
-  /* background-color: rgba(245, 245, 245, 1); */
 
-  transform: scale(1.2);
+
+/* HEADERS - Content & Community */
+h1{
+  font-family: 'retro_cool';
+  font-weight:normal;
+  font-style:normal;
+  position: relative;
+  color: #a3542a;
+  font-size: 4em;
+  text-align: center;
+  filter:drop-shadow(2px 2px 2px rgba(0, 0, 0, 1));
 }
-.padding{
-  padding-top: 10px;
-}
-.padding-bottom{
-  padding-bottom: 50px;
+
+
+/* LINKS */
+.logos{width: 90%; height: 100%; border-radius: 10px;}
+img{transition: all .2s ease-in-out; filter: drop-shadow(2px 2px 3px #333);}
+img:hover{transform: scale(1.2);}
+
+
+/* VIDEO PLAYERS - YouTube, Twitch, Twitter & TikTok  */
+iframe{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+  overflow: hidden;
 }
 .twitchplayer{
   width: 100%;
@@ -94,12 +76,13 @@ img:hover{
   border-radius: 10px;
   overflow: hidden;
 }
-iframe{
+.twitter-timeline{
+  height: 100%;
+  width: 100%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 10px;
   overflow: hidden;
 }
-
 .tiktok-embed{
   height: 100%;
   width: 100%;
@@ -110,31 +93,69 @@ iframe{
   margin-bottom: 0px !important;
 }
 
-.twitter-timeline{
-  height: 100%;
-  width: 100%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border-radius: 10px;
-  overflow: hidden;
-}
 
+/* BACK TO TOP BUTTON & BREAD HEY GIF */
+#myBtn {
+  margin: auto;
+  right: 5px;
+  display: block;
+  position: fixed;
+  bottom: -75px;
+  font-family: 'retro_cool';
+  font-weight:normal;
+  font-style:normal;
+  z-index: 1;
+  font-size: 30px;
+  border: none;
+  outline: none;
+  color: #a3542a;
+  cursor: pointer;
+  padding: 0px 10px 0px 10px !important;
+  border-radius: 10px;
+  transition: all 1s;
+  transform: translateY(0%);
+  background-color: hsla(45, 83%, 67%, 1);
+  box-shadow: 2px 2px 3px #000;
+}
+#myBtn section {filter:drop-shadow(1px 1px 1px rgba(0, 0, 0, 1));}
+
+#breadGif {
+  display: block;
+  background-image: url('../Pics/001_PEPOWAVEWELCOME.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 75px;
+  width: 200px;
+  margin: auto;
+  left: 5px;
+  position: fixed;
+  bottom: 0px;
+  transition: all 1s;
+  transform: translateX(0%);
+  z-index: 1;
+}
+#breadGif:hover{transform: scale(1.1) !important;}
+
+
+/* FOOTER - Footer Buttons & Animations */
 footer {
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
   color: white;
-  background: hsla(31, 97%, 53%, 0.7);
-  background: linear-gradient(135deg, hsla(31, 97%, 53%, 0.7) 0%, hsla(45, 83%, 67%, 0.7) 100%);
-  background: -moz-linear-gradient(135deg, hsla(31, 97%, 53%, 0.7) 0%, hsla(45, 83%, 67%, 0.7) 100%);
-  background: -webkit-linear-gradient(135deg, hsla(31, 97%, 53%, 0.7) 0%, hsla(45, 83%, 67%, 0.7) 100%);
+  background: hsla(31, 97%, 53%, 1);
+  background: linear-gradient(135deg, hsla(31, 97%, 53%, 1) 0%, hsla(45, 83%, 67%, 1) 100%);
+  background: -moz-linear-gradient(135deg, hsla(31, 97%, 53%, 1) 0%, hsla(45, 83%, 67%, 1) 100%);
+  background: -webkit-linear-gradient(135deg, hsla(31, 97%, 53%, 1) 0%, hsla(45, 83%, 67%, 1) 100%);
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FC8B13", endColorstr="#F1CE66", GradientType=1 );
+  height: 40px;
 }
 i{
   font-size: 25px !important;
-  padding: 5px;
+  padding: 10px;
   color: white;
-  filter:drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.2));
+  filter:drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.2));
   text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.2), 1px -1px 1px rgba(0, 0, 0, 0.2), -1px 1px 1px rgba(0, 0, 0, 0.2), 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
 i:hover{
@@ -148,97 +169,43 @@ i:hover{
 .fa-instagram{color:#F44E50;}
 .fa-twitter{color: #1DA1F2;}
 .fa-reddit{color: #FF4603;}
-h1{
-  font-family: 'retro_cool';
-  font-weight:normal;
-  font-style:normal;
-  position: relative;
-  color: #a3542a;
-  font-size: 4em;
-  text-align: center;
-  /* text-shadow: -2px -2px 1px #000, 2px -2px 1px #000, -2px 2px 1px #000, 2px 2px 1px #000; */
-  filter:drop-shadow(2px 2px 2px rgba(0, 0, 0, 1));
-}
-#myBtn {
-  margin: auto;
-  right: 0;
-  display: none;
-  position: fixed;
-  bottom: 61px;
-  font-family: 'retro_cool';
-  font-weight:normal;
-  font-style:normal;
-  z-index: 99;
-  font-size:25px;
-  border: none;
-  outline: none;
-  background-color: rgba(0,0,0,0);
-  color: #a3542a;
-  cursor: pointer;
-  padding: 0px 0px 0px 0px !important;
-  border-radius: 10px;
 
 
-}
-#myBtn:hover {
-  background-color: hsla(45, 83%, 67%, 0.3);
-    transform: scale(1.1);
-    box-shadow: 2px 2px 3px #000;
-}
-#myBtn section {
-  filter:drop-shadow(2px 2px 2px rgba(0, 0, 0, 1));
-}
 
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
+/* SIZE UP - Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
   .profile-pic{
-    width: 150px;
-    height: 150px;
+    width: 250px;
+    height: 250px;
   }
-  .twitter-timeline{
-    height: 100%;
-    width: 100%;
-  }
-  .tiktok-embed{
-    height: 100%;
-    width: 100%;
+  h1 {
+    font-size: 6em;
   }
   i{
-    padding: 10px;
-    color: white;
+    font-size: 30px;
     filter:drop-shadow(4px 2px 2px rgba(0, 0, 0, 0.2));
-    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.2), 1px -1px 1px rgba(0, 0, 0, 0.2), -1px 1px 1px rgba(0, 0, 0, 0.2), 1px 1px 1px rgba(0, 0, 0, 0.2);
   }
   #myBtn {
-    display: none;
+    display: block;
     position: fixed;
-    bottom: 61px;
+    bottom: -75px;
     right: 50px;
-    z-index: 99;
+    z-index: 1;
     font-size: 50px;
     border: none;
     outline: none;
-    background-color: rgba(0,0,0,0);
+    background-color: rgba(0,0,0,0) !important;
     color: #a3542a;
     cursor: pointer;
     padding: 0px 10px 0px 10px !important;
     border-radius: 10px;
-
-
+    transition: all 1s;
+    transform: translateY(0%);
+    box-shadow: 0px 0px 0px #000;
   }
   #myBtn:hover {
-    background-color: hsla(45, 83%, 67%, 0.3);
+    background-color: hsla(45, 83%, 67%, 0.3) !important;
     transform: scale(1.1);
     box-shadow: 2px 2px 3px #000;
   }
-
-
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-  html {height: 100%;}
-  .logos{width: 100%;}
-  h1{font-size: 6em;}
 }
