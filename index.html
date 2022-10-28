@@ -14,10 +14,17 @@
 		<script src='https://kit.fontawesome.com/54e22d9674.js' crossorigin='anonymous'></script>
 		<script src= 'https://player.twitch.tv/js/embed/v1.js'></script>
 	</head>
-	<body id="rotateGradient">
+	<body id="rotateGradient" class="">
 		<main class='container'>
 			<button onclick="topFunction()" id="myBtn" title="Back to Top"><section>Back to Top</section></button>
-			<div id="breadGif"></div>
+			<a href="../snesStyle/index.html"><div id="breadGif"></div></a>
+			<div id= "game" class="game">
+				<div id="lifeCounter" style='background-image: url("Pics/Hearts3.png");'></div>
+				<div id="scoreCounter"><span>0</span></div>
+				<div id="gameOver"><div><button onclick="playAgain()">Play?</button></div></div>
+				<div id="breadMan"></div>
+				<div id="obstacle"></div>
+			</div>
 
 			<!--LINKS-->
 			<div>
@@ -25,7 +32,7 @@
 					<div class='col-12'>
 						<br>
 						<a href='https://breadandbutterr.com/' target='_blank'>
-							<img class="profile-pic" src="Pics/profpicNew3.png"></img>
+							<img class="profile-pic" id="profile-pic" src="Pics/profpicNew3.png"></img>
 						</a>
 						<br>
 						<br>
@@ -33,17 +40,17 @@
 				</div>
 				<h1>CONTENT:</h1>
 				<div class='row'>
-					<div class='col-6 col-md-4'><a href='https://www.twitch.com/BreadAndButterr' target='_blank'><img class='logos' src='Pics/TwitchFULL.wine.png'></img></a></div>
-					<div class='col-6 col-md-4'><a href='https://www.youtube.com/c/BreadandButterrYT?sub_confirmation=1' target='_blank'><img class='logos' src='Pics/YouTube.wine.png'></img></a></div>
-					<div class='offset-3 col-6 offset-md-0 col-md-4'><a href='https://www.tiktok.com/@brett.sloan' target='_blank'><img class='logos' src='Pics/TikTok.wine.png'></img></a></div>
+					<div class='col-6 col-md-4'><a href='https://www.twitch.com/BreadAndButterr' target='_blank'><img class='logos' id="twitch-logo" src='Pics/TwitchFULL.wine.png'></img></a></div>
+					<div class='col-6 col-md-4'><a href='https://www.youtube.com/c/BreadandButterrYT?sub_confirmation=1' target='_blank'><img class='logos' id="youtube-logo" src='Pics/YouTube.wine.png'></img></a></div>
+					<div class='offset-3 col-6 offset-md-0 col-md-4'><a href='https://www.tiktok.com/@brett.sloan' target='_blank'><img class='logos' id="tiktok-logo" src='Pics/TikTok.wine.png'></img></a></div>
 				</div>
 				<br>
 				<h1>COMMUNITY:</h1>
 				<div class='row'>
-					<div class='col-6 col-md-3'><a href='https://www.discord.gg/PWQdbKb' target='_blank'><img class='logos' src='Pics/Discord.wine.png'></img></a></div>
-					<div class='col-6 col-md-3'><a href='https://www.twitter.com/Brettsloan' target='_blank'><img class='logos' src='Pics/TwitterFULL.wine.png'></img></a></div>
-					<div class='col-6 col-md-3'><a href='https://www.reddit.com/r/BreadAndButterr/' target='_blank'><img class='logos' src='Pics/Reddit-Logo.wine.png'></img></a></div>
-					<div class='col-6 col-md-3'><a href='https://www.instagram.com/brettsloan/' target='_blank'><img class='logos' src='Pics/Instagram.Fullwine.png'></img></a></div>
+					<div class='col-6 col-md-3'><a href='https://www.discord.gg/PWQdbKb' target='_blank'><img class='logos' id="discord-logo" src='Pics/Discord.wine.png'></img></a></div>
+					<div class='col-6 col-md-3'><a href='https://www.twitter.com/Brettsloan' target='_blank'><img class='logos' id="twitter-logo" src='Pics/TwitterFULL.wine.png'></img></a></div>
+					<div class='col-6 col-md-3'><a href='https://www.reddit.com/r/BreadAndButterr/' target='_blank'><img class='logos' id="reddit-logo" src='Pics/Reddit-Logo.wine.png'></img></a></div>
+					<div class='col-6 col-md-3'><a href='https://www.instagram.com/brettsloan/' target='_blank'><img class='logos' id="instagram-logo" src='Pics/Instagram.Fullwine.png'></img></a></div>
 				</div>
 				<br>
 				<br>
@@ -85,53 +92,6 @@
 		<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js' integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl' crossorigin='anonymous'></script>
 		<script async src='http://platform.twitter.com/widgets.js' charset='utf-8'></script>
 		<script async src='https://www.tiktok.com/embed.js'></script>
-		<script type='text/javascript'>
-			//BACKGROUND & BREAD GIF
-			//rotate the Background Gradient & Bring in Bread Gif
-			var inc = 90; //starting degrees of the gradient
-			function increment(){
-				inc += 1;
-				if (inc >= 360) {
-					document.getElementById("breadGif").style.transform = 'translateX(-150%)'; //After 360 increments (~5 seconds), slide in Bread Gif
-				}
-				if (inc >= 720) {
-					document.getElementById("breadGif").style.transform = 'translateX(0%)'; //After anothjer ~5 seconds, hide Bread Gif then start over
-					inc = 0;
-				}
-				document.getElementById("rotateGradient").style.background = '-webkit-linear-gradient(-' + inc + 'deg, hsla(31, 97%, 53%, 1) 0%, hsla(45, 83%, 67%, 1) 100%)';
-			}
-
-			var interval = setInterval(increment, 14.5);
-			window.onload = increment();
-
-			//BACK TO TOP BUTTON
-			window.onscroll = function() {scrollFunction()};
-
-			function scrollFunction() {
-				if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-					document.getElementById("myBtn").style.transform = "translateY(0%)";
-					document.getElementById("myBtn").style.bottom = "50px"; // When the user scrolls down 20px from the top of the document, Slide up button
-				} else {
-					document.getElementById("myBtn").style.transform = "translateY(100%)";
-					document.getElementById("myBtn").style.bottom = "-75px";
-				}
-			}
-
-			function topFunction() {
-				document.body.scrollTop = 0;
-				document.documentElement.scrollTop = 0; //Click button, back to top of window
-			}
-
-			//TWITCH PLAYER
-		  var options = {
-		  	width: '100%',
-		    height: '100%',
-		    channel: 'breadandbutterr',
-		    parent: ['localhost']
-		  };
-		  var player = new Twitch.Player('twitchplayer', options);
-		  player.setVolume(0.5);
-
-		</script>
+		<script src='Scripts/Script.js'></script>
 	</body>
 </html>
