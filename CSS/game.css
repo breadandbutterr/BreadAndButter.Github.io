@@ -1,0 +1,85 @@
+@import "main.css";
+
+#GBC {width: 33%;}
+#GBC:hover {transform: scale(1);}
+
+.game {
+  /* display: none; */
+  /* margin: auto; */
+  border: 2px solid black;
+  /* width: 600px; */
+  /* height: 200px; */
+}
+
+#breadMan {
+  background-image: url(../Pics/big.png);
+  background-size: 60px 60px;
+  width: 60px;
+  height: 60px;
+  position: relative;
+  left: 25px;
+  top: 68px;
+}
+
+#obstacle {
+  background-image: url(../Pics/Enemy4.png);
+  background-size: 30px 30px;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  top: 63px;
+  left: 560px;
+  display: none;
+}
+
+#lifeCounter{
+  background-size: 70px 20px;
+  width: 70px;
+  height: 20px;
+  position: relative;
+  margin: auto;
+}
+#scoreCounter{
+  position: relative;
+  margin: auto;
+  text-align: center;
+}
+#gameOver{
+  position: relative;
+  margin: auto;
+  text-align: center;
+}
+.jump {
+  animation: jump 0.6s linear;
+}
+
+@keyframes jump {
+  0% {
+    top: 98px;
+  }
+  25% {
+    top: 73.5px;
+  }
+
+  50% {
+    top: 55px;
+  }
+
+  75% {
+    top: 73.5px;
+  }
+
+  100% {
+    top: 98px;
+  }
+}
+
+@keyframes obstacleMovement {
+  0% {
+    left: 560px;
+  }
+  100%{
+    left: -50px;
+  }
+
+}

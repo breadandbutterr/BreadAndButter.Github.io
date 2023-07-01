@@ -18,6 +18,7 @@ body {
   background: -webkit-linear-gradient(135deg, hsla(31, 97%, 53%, 1) 0%, hsla(45, 83%, 67%, 1) 100%);
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FC8B13", endColorstr="#F1CE66", GradientType=1 );
 	overflow: hidden;
+	text-align: center;
 }
 
 /* Background */
@@ -31,7 +32,20 @@ body {
   width: 100%;
 	height: 100%;
 }
+.game a {
+	font-size: 2em;
+	filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.7));	
+}
+a {
+	text-decoration: none;
+	text-align: center;
+}
 
+a:visited {
+	text-decoration: none;
+	text-align: center;
+	color: white;
+}
 
 /* Game Objects */
 #lifeCounter{

@@ -1,16 +1,14 @@
-//BACKGROUND & BREAD GIF
-//rotate the Background Gradient & Bring in Bread Gif
+//BREAD GIF
 var inc = 90; //starting degrees of the gradient
 function increment(){
   inc += 1;
   if (inc >= 360) {
-    document.getElementById("breadGif").style.transform = 'translateX(-150%)'; //After 360 increments (~5 seconds), slide in Bread Gif
+    document.getElementById("breadGif").style.transform = 'translateY(150%)'; //After 360 increments (~5 seconds), slide in Bread Gif
   }
   if (inc >= 720) {
-    document.getElementById("breadGif").style.transform = 'translateX(0%)'; //After anothjer ~5 seconds, hide Bread Gif then start over
+    document.getElementById("breadGif").style.transform = 'translateY(0%)'; //After anothjer ~5 seconds, hide Bread Gif then start over
     inc = 0;
   }
-  document.getElementById("rotateGradient").style.background = '-webkit-linear-gradient(-' + inc + 'deg, hsla(31, 97%, 53%, 1) 0%, hsla(45, 83%, 67%, 1) 100%)';
 }
 
 var interval = setInterval(increment, 14.5);
@@ -34,34 +32,41 @@ function topFunction() {
   document.documentElement.scrollTop = 0; //Click button, back to top of window
 }
 
-//change to 8 8bit
-function changeToEightBit() {
+function hamburgerMenu() {
+  if (document.getElementById("links").style.display === "block") {
+    document.getElementById("links").style.display = "none";
+    document.getElementById("content-wrapper").style.top = "75px";
+    document.getElementById("hamburger-menu").src = "Pics/hamburger2.png"
+    document.getElementById("navbar").style.height = "75px";
+    document.getElementById("navbar").style.backgroundColor = "rgba(0, 0, 0, 0.0)";
 
-  let headers = document.querySelectorAll('h1');
-  for(var i = 0; i < headers.length; i++) {
-    headers[i].style.fontFamily = "dragon_font";
+  } else {
+    document.getElementById("links").style.display = "block";
+    document.getElementById("content-wrapper").style.top = "225px";
+    document.getElementById("hamburger-menu").src = "Pics/hamburger3.png"
+    document.getElementById("navbar").style.height = "175px";
+    document.getElementById("navbar").style.backgroundColor = "rgba(0, 0, 0, 0.2)";
+    document.getElementById("navbar").style.backgroundColor = "rgba(0, 0, 0, 0.2)";
   }
-  document.getElementById('myBtn').style.fontFamily = "dragon_font";
-  document.getElementById('rotateGradient').classList.add('eightbit');
-  document.getElementById('game').style.display = 'block';
-  document.getElementById('profile-pic').setAttribute("src","Pics/eightbit/profpicNew3.png");
-  document.getElementById('twitch-logo').setAttribute("src","Pics/eightbit/TwitchFULL.wine.png");
-  document.getElementById('youtube-logo').setAttribute("src","Pics/eightbit/YouTube.wine.png");
-  document.getElementById('tiktok-logo').setAttribute("src","Pics/eightbit/Tiktok.wine.png");
-  document.getElementById('discord-logo').setAttribute("src","Pics/eightbit/Discord.wine.png");
-  document.getElementById('reddit-logo').setAttribute("src","Pics/eightbit/Reddit-Logo.wine.png");
-  document.getElementById('twitter-logo').setAttribute("src","Pics/eightbit/TwitterFULL.wine.png");
-  document.getElementById('instagram-logo').setAttribute("src","Pics/eightbit/Instagram.Fullwine.png");
 }
 
+$(function() {
+  $('.a-link').click(function() {
+    $('.a-link').removeClass("active");
+    $(this).addClass("active");
+    x = $(this).attr("data-title");
 
+    if (x == "chess") {
+      $('body').addClass("chess-body");
+    } else {
+      $('body').removeClass("chess-body");
+    }
+    $('#landing').addClass("hidden");
+    $('#chess').addClass("hidden");
+    $('#webDesign').addClass("hidden");
+    $('#videoEditing').addClass("hidden");
+    $('#twitchWidgets').addClass("hidden");
 
-//TWITCH PLAYER
-var options = {
-  width: '100%',
-  height: '100%',
-  channel: 'breadandbutterr',
-  parent: ['localhost']
-};
-var player = new Twitch.Player('twitchplayer', options);
-player.setVolume(0.5);
+    $('#' + x).removeClass("hidden");
+  })
+});

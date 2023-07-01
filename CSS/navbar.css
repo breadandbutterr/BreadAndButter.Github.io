@@ -1,0 +1,86 @@
+/*----------LOGO - Hover & Rotations----------*/
+
+.spinning-logo{
+  /* width: 100%; */
+  height:100px;
+  /* border-radius: 50%; */
+  filter: drop-shadow(2px 2px 3px #333);
+  z-index: 0;
+  position: absolute;
+  top: 15px;
+  left: 5px;
+  /* animation: rotation 6s infinite linear; */
+}
+/* @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  } */
+
+/*Rotation 2 is the same as rotation one except it increases the size when hovered  */
+/* .spinning-logo:hover {animation: rotationTwo 2s infinite linear;}
+@keyframes rotationTwo {
+    from {
+      transform: rotate(0deg) scale(1);
+    }
+    to {
+      transform: rotate(359deg) scale(10);
+    }
+  } */
+
+
+/*----------NAVBAR STYLES----------*/
+
+.navbar {
+  text-align: center;
+  height: 75px;
+  padding: 25px;
+}
+
+.right-side-nav{
+  z-index: 100;
+}
+
+#links{display: none;}
+
+#hamburger-menu {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  top: 18.75px;
+  right: 25px;
+}
+
+.navbar-wrapper a.icon {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+ul {
+  list-style-type: none;
+  overflow: hidden;
+  padding: 0;
+}
+
+li{padding: 2.5px;}
+
+li .active {font-weight: 600;}
+
+a {
+  color: #f5f5f5;
+  font-family: 'Oswald', sans-serif;
+  text-decoration: none;
+  filter:drop-shadow(1px 1px 1px rgba(0,0,0,0.7));
+}
+
+li a:hover {
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 5px;
+  padding: 5px;
+  transform: scale(1.1);
+}

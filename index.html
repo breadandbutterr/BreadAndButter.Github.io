@@ -8,88 +8,250 @@
 		<meta name='author' content='Brett Sloan'>
 		<title>BreadandButterr ¯\_(ツ)_/¯</title>
 		<link rel='icon' type='image/png' href='Pics/favicon.png'>
-		<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css'>
 		<link rel='stylesheet' href='CSS/main.css'>
 		<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css'>
 		<script src='https://kit.fontawesome.com/54e22d9674.js' crossorigin='anonymous'></script>
 		<script src= 'https://player.twitch.tv/js/embed/v1.js'></script>
 	</head>
-	<body id="rotateGradient" class="">
-		<main class='container'>
-			<button onclick="topFunction()" id="myBtn" title="Back to Top"><section>Back to Top</section></button>
-			<a href="snesStyle/index.html"><div id="breadGif"></div></a>
-			<div id= "game" class="game">
-				<div id="lifeCounter" style='background-image: url("Pics/Hearts3.png");'></div>
-				<div id="scoreCounter"><span>0</span></div>
-				<div id="gameOver"><div><button onclick="playAgain()">Play?</button></div></div>
-				<div id="breadMan"></div>
-				<div id="obstacle"></div>
-			</div>
+	<body>
+		<main>
 
-			<!--LINKS-->
-			<div>
-				<div class='row text-center'>
-					<div class='col-12'>
-						<br>
-						<a href='https://breadandbutterr.com/' target='_blank'>
-							<img class="profile-pic" id="profile-pic" src="Pics/profpicNew3.png"></img>
+			<!-- NAVBAR -->
+			<nav class="navbar" id="navbar">
+	  		<div class="navbar-wrapper">
+	    		<div class="right-side-nav" id="links">
+	      		<ul>
+	        		<li>
+	          		<a class="active a-link" href="#landing" data-title="landing">Content</a>
+	        		</li>
+	        		<li>
+	          		<a class="a-link" href="#chess" data-title="chess">Chess</a>
+	        		</li>
+							<li>
+								<a class="a-link" href="#webDesign" data-title="webDesign">Web Design</a>
+							</li>
+							<li>
+								<a class="a-link" href="#videoEditing" data-title="videoEditing">Video Editing</a>
+							</li>
+							<li>
+								<a class="a-link" href="#twitchWidgets" data-title="twitchWidgets">Twitch Widgets</a>
+							</li>
+							<li>
+								<a class="a-link" href="snesStyle/index.html">Game Design</a>
+							</li>
+	    		</div>
+					<span class="icon" onclick="hamburgerMenu()">
+						<img class="hamburger-menu" id="hamburger-menu" src="Pics/hamburger2.png"></img>
+					</span>
+	  		</div>
+			</nav>
+
+			<!-- BREAD GIF SAYING WELCOME -->
+			<div id="breadGif"></div>
+
+			<div class="content-wrapper" id="content-wrapper">
+				<div class="prof-pic">
+					<img src="Pics/ProfPicHeader.jpg" alt="">
+				</div>
+
+
+				<!--LANDING PAGE LINKS-->
+				<div class="landing" id="landing">
+					<div class="content-logos-wrapper">
+						<div class="logo-wrapper">
+							<h3>Watch the</h3>
+							<h1>Content:</h1>
+						</div>
+						<div class="logo-wrapper flex-item">
+							<a href='https://www.twitch.com/BreadAndButterr' target='_blank'>
+								<img class='logos' id="twitch-logo" src='Pics/TwitchFULL.wine2.png'></img>
+							</a>
+						</div>
+						<div id="twitch-hover-player" class="logo-wrapper hidden">
+							<iframe class="twitch-iframe" src="https://clips.twitch.tv/embed?clip=PerfectSmokyGorillaSquadGoals-Fx0IhThmeYXfQzIH&parent=https://breadandbutterr.github.io/" frameborder="0" allowfullscreen="true" scrolling="no"></iframe>
+						</div>
+						<div class="logo-wrapper flex-item youtube-hover">
+							<a href='https://www.youtube.com/channel/UCMQB3PBSig4fWtQPfF60nxw?sub_confirmation=1' target='_blank'>
+								<img class='logos' id="youtube-logo" src='Pics/YouTube.wine2.png'></img>
+							</a>
+						</div>
+						<div id="youtube-hover-player" class="logo-wrapper hidden">
+							<iframe class="youtube-iframe" src="https://www.youtube.com/embed/RmD7eF7VaBE" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+						</div>
+						<div class="logo-wrapper flex-item tiktok-hover">
+							<a href='https://www.tiktok.com/@brett.sloan' target='_blank'>
+								<img class='logos' id="tiktok-logo" src='Pics/TikTok.wine2.png'></img>
+							</a>
+						</div>
+						<div id="tiktok-hover-player" class="logo-wrapper hidden">
+							<blockquote class="tiktok-embed hidden" cite="https://www.tiktok.com/@brett.sloan/video/7179360290348322054" data-video-id="7179360290348322054">
+								<section></section>
+							</blockquote>
+						</div>
+					</div>
+
+					<br>
+					<div class="content-logos-wrapper">
+						<div class="logo-wrapper">
+							<h3>Join the</h3>
+							<h1>Community:</h1>
+						</div>
+						<div class="logo-wrapper flex-item">
+							<a href='https://www.discord.gg/PWQdbKb' target='_blank'>
+								<img class='logos' id="discord-logo" src='Pics/Discord.wine2.png'></img>
+							</a>
+						</div>
+						<div class="logo-wrapper flex-item">
+							<a href='https://www.twitter.com/Brettsloan' target='_blank'>
+								<img class='logos' id="twitter-logo" src='Pics/TwitterFULL.wine2.png'></img>
+							</a>
+						</div>
+						<div class="logo-wrapper flex-item">
+							<a href='https://www.instagram.com/brettsloan/' target='_blank'>
+								<img class='logos' id="instagram-logo" src='Pics/Instagram.Fullwine2.png'></img>
+							</a>
+						</div>
+						<div class="logo-wrapper flex-item">
+							<a href='https://www.reddit.com/r/BreadAndButterr/' target='_blank'>
+								<img class='logos' id="reddit-logo" src='Pics/Reddit-Logo.wine2.png'></img>
+							</a>
+						</div>
+					</div>
+					<br>
+					<br>
+				</div>
+
+
+				<!-- CHESS PAGE HTML -->
+				<div id="chess" class="content-logos-wrapper hidden">
+					<div class="logo-wrapper">
+						<h1>CHESS:</h1>
+					</div>
+					<div class="logo-wrapper flex-item">
+						<a href='https://www.chess.com/club/breadandbutterr' target='_blank'>
+							<img class='logos' id="instagram-logo" src='Pics/Chess.png'></img>
 						</a>
-						<br>
-						<br>
 					</div>
-				</div>
-				<h1>CONTENT:</h1>
-				<div class='row'>
-					<div class='col-6 col-md-4'><a href='https://www.twitch.com/BreadAndButterr' target='_blank'><img class='logos' id="twitch-logo" src='Pics/TwitchFULL.wine.png'></img></a></div>
-					<div class='col-6 col-md-4'><a href='https://www.youtube.com/c/BreadandButterrYT?sub_confirmation=1' target='_blank'><img class='logos' id="youtube-logo" src='Pics/YouTube.wine.png'></img></a></div>
-					<div class='offset-3 col-6 offset-md-0 col-md-4'><a href='https://www.tiktok.com/@brett.sloan' target='_blank'><img class='logos' id="tiktok-logo" src='Pics/TikTok.wine.png'></img></a></div>
-				</div>
-				<br>
-				<h1>COMMUNITY:</h1>
-				<div class='row'>
-					<div class='col-6 col-md-3'><a href='https://www.discord.gg/PWQdbKb' target='_blank'><img class='logos' id="discord-logo" src='Pics/Discord.wine.png'></img></a></div>
-					<div class='col-6 col-md-3'><a href='https://www.twitter.com/Brettsloan' target='_blank'><img class='logos' id="twitter-logo" src='Pics/TwitterFULL.wine.png'></img></a></div>
-					<div class='col-6 col-md-3'><a href='https://www.reddit.com/r/BreadAndButterr/' target='_blank'><img class='logos' id="reddit-logo" src='Pics/Reddit-Logo.wine.png'></img></a></div>
-					<div class='col-6 col-md-3'><a href='https://www.instagram.com/brettsloan/' target='_blank'><img class='logos' id="instagram-logo" src='Pics/Instagram.Fullwine.png'></img></a></div>
-				</div>
-				<br>
-				<br>
-				<div class="row">
-					<div class="col-12 col-md-6">
-						<iframe width="100%" height="315" src="https://www.youtube.com/embed/OukQ5mlBwvc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<div class="logo-wrapper flex-item">
+						<a href='https://www.youtube.com/c/BreadandButterrYT?sub_confirmation=1' target='_blank'>
+							<img class='logos' id="youtube-logo" src='Pics/YouTube.wine2.png'></img>
+						</a>
+						<iframe class="youtube-iframe hidden" src="https://www.youtube.com/embed/OukQ5mlBwvc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					</div>
-					<div class='col-12 col-md-6'>
-						<iframe src="https://clips.twitch.tv/embed?clip=HyperInquisitivePotKlappa-7kcWJQo7IjQXyySA&parent=https://breadandbutterr.github.io" frameborder="0" allowfullscreen="true" scrolling="no" height="315" width="100%"></iframe>
-					</div>
-				</div>
-				<div class='row'>
-					<div class='col-12 col-md-6' style="height:100%;">
-						<a class='twitter-timeline' href='https://twitter.com/BrettSloan' data-theme='dark' data-limit='3'></a>
-					</div>
-					<div class='col-12 col-md-6' style="height:100%;">
-						<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@brett.sloan/video/7145203082681535750" data-video-id="7145203082681535750" style="max-width: 605px;min-width: 325px;" >
-							 <section></section>
+					<div class="logo-wrapper flex-item">
+						<a href='https://www.tiktok.com/@breadandbutterrchess' target='_blank'>
+							<img class='logos' id="tiktok-logo" src='Pics/TikTok.wine2.png'></img>
+						</a>
+						<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@breadandbutterrchess/video/7197897785213996294" data-video-id="7197897785213996294">
+							<section></section>
 						</blockquote>
 					</div>
+
 				</div>
-				<footer>
-					<div class='text-center'>
-						<a href='https://www.twitch.com/BreadAndButterr' target='_blank'><i class='fab fa-twitch fa-2x'></i></a>
-						<a href='https://www.youtube.com/c/BreadandButterrYT?sub_confirmation=1' target='_blank'><i class='fab fa-youtube fa-2x'></i></a>
-						<a href='https://www.tiktok.com/@brett.sloan' target='_blank'><i class='fab fa-tiktok fa-2x'></i></a>
-						<a href='https://www.discord.gg/PWQdbKb' target='_blank'><i class='fab fa-discord fa-2x'></i></a>
-						<a href='https://www.twitter.com/Brettsloan' target='_blank'><i class='fab fa-twitter fa-2x'></i></a>
-						<a href='https://www.reddit.com/r/BreadAndButterr/' target='_blank'><i class='fab fa-reddit fa-2x'></i></a>
-						<a href='https://www.instagram.com/brettsloan/' target='_blank'><i class='fab fa-instagram fa-2x'></i></a>
-						<a href='https://www.ko-fi.com/breadandbutterr' target="_blank"><i class='fa fa-coffee fa-2x'></i></a>
+
+				<!-- WEBDESIGN  -->
+				<div id="webDesign" class="content-logos-wrapper hidden">
+					<div class="logo-wrapper">
+						<h1>LANGUAGES:</h1>
+						<h3>HTML, CSS, JAVASCRIPT, BOOTSTRAP, JQUERY</h3>
 					</div>
-				</footer>
+					<div class="logo-wrapper">
+						<br><br>
+						<h1>PROJECTS:</h1>
+					</div>
+					<div class="logo-wrapper">
+            <iframe src="https://nandrettv.github.io/" class="iframe-website"></iframe>
+						<br><br>
+						<a href='https://nandrettv.github.io/' target='_blank'>
+              <button type="button" name="button">Visit Site</button>
+            </a>
+						<br><br><br>
+					</div>
+					<div class="logo-wrapper">
+            <iframe src="https://brettsloan.github.io/" class="iframe-website"></iframe>
+						<br><br>
+            <a href='https://brettsloan.github.io/' target='_blank'>
+              <button type="button" name="button">Visit Site</button>
+            </a>
+						<br><br><br>
+          </div>
+          <div class="logo-wrapper">
+            <iframe src="https://brettsloan.github.io/Projects/Demoraes%20Music/index.html" class="iframe-website"></iframe>
+						<br><br>
+            <a href='https://brettsloan.github.io/Projects/Demoraes%20Music/index.html' target='_blank'>
+              <button type="button" name="button">Visit Site</button>
+            </a>
+						<br><br><br>
+          </div>
+				</div>
+
+				<!-- VIDEO EDITING -->
+				<div id="videoEditing" class="content-logos-wrapper hidden">
+					<div class="logo-wrapper">
+						<h3>Editing</h3>
+						<h1>REEL:</h1>
+						<p>Coming Soon...</p>
+					</div>
+					<div class="logo-wrapper">
+						<h3>Videos for</h3>
+						<h1>CLIENTELE:</h1>
+					</div>
+					<div class="logo-wrapper flex-item">
+						<iframe class="iframe-youtube-video" src="https://www.youtube.com/embed/rLaKcCft3lY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+						<p>Client: inabox44</p>
+					</div>
+					<div class="logo-wrapper flex-item">
+						<iframe class="iframe-youtube-video" src="https://www.youtube.com/embed/E5AbumD8ejM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+						<p>Client: inabox44</p>
+					</div>
+					<div class="logo-wrapper flex-item">
+						<iframe class="iframe-youtube-video" src="https://www.youtube.com/embed/_VD2uBMkNCc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+						<p>Client: inabox44</p>
+					</div>
+					<br>
+					<div class="logo-wrapper">
+						<h3>Videos of</h3>
+						<h1>MYSELF:</h1>
+					</div>
+					<div class="logo-wrapper flex-item">
+						<iframe class="iframe-youtube-video" src="https://www.youtube.com/embed/-NF3dF0k2WQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+					</div>
+					<div class="logo-wrapper flex-item">
+						<iframe class="iframe-youtube-video" src="https://www.youtube.com/embed/Ex2T8maM954" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+					</div>
+					<div class="logo-wrapper flex-item">
+						<iframe class="iframe-youtube-video" src="https://www.youtube.com/embed/RmD7eF7VaBE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+					</div>
+					<div class="logo-wrapper flex-item">
+						<iframe class="iframe-youtube-video" src="https://www.youtube.com/embed/0XAxG1vn7RY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+					</div>
+					<div class="logo-wrapper flex-item">
+						<iframe class="iframe-youtube-video" src="https://www.youtube.com/embed/OkukI0cEShY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+					</div>
+					<div class="logo-wrapper flex-item">
+						<iframe class="iframe-youtube-video" src="https://www.youtube.com/embed/PuEDOG3czYQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+					</div>
+					<div class="logo-wrapper flex-item">
+						<iframe class="iframe-youtube-video" src="https://www.youtube.com/embed/OukQ5mlBwvc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+					</div>
+
+					<div class="logo-wrapper">
+						<p>Worked alongside Creators such as: <br>PiscesPls, inabox44, Samwitch</p>
+					</div>
+				</div>
+
+				<!-- TWITCH WIDGETS -->
+				<div id="twitchWidgets" class="content-logos-wrapper hidden">
+					<div class="logo-wrapper">
+						<h1>Coming Soon</h1>
+					</div>
+				</div>
+
 			</div>
 		</main>
 		<script src='https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' crossorigin='anonymous'></script>
 		<script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>
 		<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous'></script>
-		<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js' integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl' crossorigin='anonymous'></script>
 		<script async src='http://platform.twitter.com/widgets.js' charset='utf-8'></script>
 		<script async src='https://www.tiktok.com/embed.js'></script>
 		<script src='Scripts/Script.js'></script>
