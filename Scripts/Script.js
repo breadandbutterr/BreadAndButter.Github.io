@@ -1,72 +1,61 @@
 //BREAD GIF
-var inc = 90; //starting degrees of the gradient
-function increment(){
-  inc += 1;
-  if (inc >= 360) {
-    document.getElementById("breadGif").style.transform = 'translateY(150%)'; //After 360 increments (~5 seconds), slide in Bread Gif
-  }
-  if (inc >= 720) {
-    document.getElementById("breadGif").style.transform = 'translateY(0%)'; //After anothjer ~5 seconds, hide Bread Gif then start over
-    inc = 0;
-  }
-}
-
-var interval = setInterval(increment, 14.5);
-window.onload = increment();
-
-//BACK TO TOP BUTTON
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    document.getElementById("myBtn").style.transform = "translateY(0%)";
-    document.getElementById("myBtn").style.bottom = "50px"; // When the user scrolls down 20px from the top of the document, Slide up button
+function breadGifSaysHello() {
+  if ($("#breadGif").css("bottom") === "0px") {
+    $("#breadGif").css("bottom","-150px");
   } else {
-    document.getElementById("myBtn").style.transform = "translateY(100%)";
-    document.getElementById("myBtn").style.bottom = "-75px";
+    $('#breadGif').css("bottom","0px");
   }
 }
 
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0; //Click button, back to top of window
-}
+//Run the bread gif every 5 seconds
+var interval = setInterval(breadGifSaysHello, 5000);
 
-function hamburgerMenu() {
-  if (document.getElementById("links").style.display === "block") {
-    document.getElementById("links").style.display = "none";
-    document.getElementById("content-wrapper").style.top = "75px";
-    document.getElementById("hamburger-menu").src = "Pics/hamburger2.png"
-    document.getElementById("navbar").style.height = "75px";
-    document.getElementById("navbar").style.backgroundColor = "rgba(0, 0, 0, 0.0)";
+window.onload = breadGifSaysHello();
 
-  } else {
-    document.getElementById("links").style.display = "block";
-    document.getElementById("content-wrapper").style.top = "225px";
-    document.getElementById("hamburger-menu").src = "Pics/hamburger3.png"
-    document.getElementById("navbar").style.height = "175px";
-    document.getElementById("navbar").style.backgroundColor = "rgba(0, 0, 0, 0.2)";
-    document.getElementById("navbar").style.backgroundColor = "rgba(0, 0, 0, 0.2)";
-  }
-}
+// MENU FUNCTIONS
 
+// Click on the menu button - toggles button animation and lowering of menu + body
+$(function() {
+  $('#menuButton').click(function(){
+    $("#menuButton").toggleClass("change"); //button animation
+
+    if ($("#navbar").css("top") === "0px") { //if navbar is visible, push it and the content up
+      $("#navbar").css("top", "-225px");
+      $("#content-wrapper").css("top","0px");
+      $("#navbar").css("backgroundColor", "rgba(0,0,0,0.0)");
+
+    } else { //if navbar isn't visible, bring it down and all the content down
+      $("#navbar").css("top", "0px");
+      $("#content-wrapper").css("top", "215px");
+      $("#navbar").css("backgroundColor","rgba(0, 0, 0, 0.2)");
+    }
+  })
+});
+
+//Click on the links within the menu to unhide that section while also hidiing the rest
 $(function() {
   $('.a-link').click(function() {
-    $('.a-link').removeClass("active");
-    $(this).addClass("active");
-    x = $(this).attr("data-title");
 
+    $('.a-link').removeClass("active"); //remove the 'active' class from all links
+    $(this).addClass("active"); //give the 'active' clss to this clicked on link
+
+    x = $(this).attr("data-title"); //create variable for clicked on link using the data-title attribute
+
+    //specific to the chess page only since I wanted the background to be different
     if (x == "chess") {
-      $('body').addClass("chess-body");
+      $('body').addClass("chess-body"); // if it is the chess page, add the chess background
     } else {
       $('body').removeClass("chess-body");
     }
+
+    // add the 'hidden' class on all the content pages
     $('#landing').addClass("hidden");
     $('#chess').addClass("hidden");
     $('#webDesign').addClass("hidden");
     $('#videoEditing').addClass("hidden");
     $('#twitchWidgets').addClass("hidden");
 
+    //then remove the hidden class from clicked link
     $('#' + x).removeClass("hidden");
   })
 });
