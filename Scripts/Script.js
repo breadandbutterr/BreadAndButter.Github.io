@@ -35,6 +35,7 @@ $(function() {
 //Click on the links within the menu to unhide that section while also hidiing the rest
 $(function() {
   $('.a-link').click(function() {
+    $('body').addClass("fade-in-image");
 
     $('.a-link').removeClass("active"); //remove the 'active' class from all links
     $(this).addClass("active"); //give the 'active' clss to this clicked on link
@@ -46,10 +47,22 @@ $(function() {
       $('body').addClass("chess-body"); // if it is the chess page, add the chess background
     } else {
       $('body').removeClass("chess-body");
+     }
+    if (x == "stomachAche") {
+      $('body').addClass("SAS-body"); // if it is the music page, add the music background
+      $('.bar1').css("background-color","#adadad");
+      $('.bar2').css("background-color","#adadad");
+      $('.bar3').css("background-color","#adadad");
+    } else {
+      $('body').removeClass("SAS-body");
+      $('.bar1').css("background-color","#853f19");
+      $('.bar2').css("background-color","#853f19");
+      $('.bar3').css("background-color","#853f19");
     }
 
     // add the 'hidden' class on all the content pages
     $('#landing').addClass("hidden");
+    $('#stomachAche').addClass("hidden");
     $('#chess').addClass("hidden");
     $('#webDesign').addClass("hidden");
     $('#videoEditing').addClass("hidden");
@@ -57,5 +70,10 @@ $(function() {
 
     //then remove the hidden class from clicked link
     $('#' + x).removeClass("hidden");
+
+    setTimeout(function() {
+      $('body').removeClass('fade-in-image');
+  }, 1000);
+
   })
 });

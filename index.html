@@ -11,7 +11,7 @@
 		<link rel='stylesheet' href='CSS/main.css'>
 		<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css'>
 	</head>
-	<body>
+	<body class="">
 		<main>
 
 			<!-- NAVBAR -->
@@ -20,23 +20,26 @@
 	    		<div class="" id="links">
 	      		<ul>
 	        		<li>
-	          		<a class="active a-link" href="#landing" data-title="landing">Content</a>
+	          		<a class="active a-link" href="#landing" data-title="landing">Socials</a>
 	        		</li>
+					<li>
+						<a class="a-link" href="#stomachAche" data-title="stomachAche">Music</a>
+					  </li>
 	        		<li>
 	          		<a class="a-link" href="#chess" data-title="chess">Chess</a>
 	        		</li>
-							<li>
-								<a class="a-link" href="#webDesign" data-title="webDesign">Web Design</a>
-							</li>
-							<li>
-								<a class="a-link" href="#videoEditing" data-title="videoEditing">Video Editing</a>
-							</li>
-							<li>
-								<a class="a-link" href="#twitchWidgets" data-title="twitchWidgets">Twitch Widgets</a>
-							</li>
-							<li>
-								<a class="a-link" href="snesStyle/index.html">Game Design</a>
-							</li>
+					<li>
+						<a class="a-link" href="#webDesign" data-title="webDesign">Web Design</a>
+					</li>
+					<li>
+						<a class="a-link" href="#videoEditing" data-title="videoEditing">Video Editing</a>
+					</li>
+					<li>
+						<a class="a-link" href="#twitchWidgets" data-title="twitchWidgets">Twitch Widgets</a>
+					</li>
+					<!-- <li>
+						<a class="a-link" href="snesStyle/index.html">Game Design</a>
+					</li> -->
 	    		</div>
 					<div id="menuButton" class="icon">
 						<div class="bar1"></div>
@@ -45,7 +48,7 @@
 					</div>
 	  		</div>
 			</nav>
-
+			
 			<!-- BREAD GIF SAYING WELCOME -->
 			<div id="breadGif"></div>
 
@@ -57,7 +60,14 @@
 
 					<div class="content-logos-wrapper">
 						<div class="prof-pic">
-							<img src="Pics/profPicHeader.jpg" alt="">
+							<img src="Pics/profPicHeader.png" alt="">
+						</div>
+						<div class="logo-wrapper">
+							<h1>BreadAndButterr:</h1>
+							<br><br>
+						</div>
+						<div class="logo-wrapper flex-item-2">
+							<iframe class="iframe-youtube-video" src="https://www.youtube.com/embed/wtdauVhKH3w?si=u3-pZSEInmgmhoLp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 						</div>
 						<div class="logo-wrapper">
 							<h3>Watch the</h3>
@@ -110,6 +120,11 @@
 							</a>
 						</div>
 						<div class="logo-wrapper flex-item">
+							<a href='https://bsky.app/profile/breadandbutterr.com' target='_blank'>
+								<img class='logos' id="twitter-logo" src='Pics/brand-announcement-card.png'></img>
+							</a>
+						</div>
+						<div class="logo-wrapper flex-item">
 							<a href='https://www.instagram.com/brettsloan/' target='_blank'>
 								<img class='logos' id="instagram-logo" src='Pics/Instagram.Fullwine2.png'></img>
 							</a>
@@ -124,6 +139,29 @@
 					<br>
 				</div>
 
+				<!-- STOMACH ACHE (MUSIC) HTML -->
+				<div id="stomachAche" class="content-logos-wrapper hidden SAS-Body">
+					<div class="prof-pic">
+						<img src="Pics/StomachAche_Logo_Black_Prof_Pic.jpg" alt="">
+					</div>
+					<div class="logo-wrapper">
+						<h1>Stomach Ache Studios:</h1>
+						<br><br>
+					</div>
+					<div class="logo-wrapper flex-item-1">
+						<a href='https://www.youtube.com/channel/UCjB9y-bd_fmxc6FRSu-_BlA' target='_blank'>
+							<img class='logos' id="youtube-logo" src='Pics/YouTube.wine2.png'></img>
+						</a>
+					</div>
+					<div class="logo-wrapper flex-item-1">
+						<a href='https://www.tiktok.com/@stomach.ache.studios' target='_blank'>
+							<img class='logos' id="tiktok-logo" src='Pics/TikTok.wine2.png'></img>
+						</a>
+						<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@stomach.ache.studios/video/7433211255793487109" data-video-id="7433211255793487109">
+							<section></section>
+						</blockquote>
+					</div>
+				</div>
 
 				<!-- CHESS PAGE HTML -->
 				<div id="chess" class="content-logos-wrapper hidden">
@@ -152,13 +190,12 @@
 							<section></section>
 						</blockquote>
 					</div>
-
 				</div>
 
 				<!-- WEBDESIGN  -->
 				<div id="webDesign" class="content-logos-wrapper hidden">
 					<div class="prof-pic">
-						<img src="Pics/profPicHeader.jpg" alt="">
+						<img src="Pics/ProfPic4300x300.jpg" alt="">
 					</div>
 					<div class="logo-wrapper">
 						<h1>LANGUAGES:</h1>
@@ -175,21 +212,21 @@
 						<br><br>
 					</div>
 					<div class="logo-wrapper">
-            <iframe src="https://nandrettv.github.io/" class="iframe-website"></iframe>
+            			<iframe src="https://nandrettv.github.io/" class="iframe-website"></iframe>
 						<br><br>
 						<a href='https://nandrettv.github.io/' target='_blank'>
-              <button type="button" name="button">Visit Site</button>
-            </a>
+              				<button type="button" name="button">Visit Site</button>
+            			</a>
 						<br><br><br>
 					</div>
 					<div class="logo-wrapper">
-            <iframe src="https://brettsloan.github.io/" class="iframe-website"></iframe>
+           				<iframe src="https://brettsloan.github.io/" class="iframe-website"></iframe>
 						<br><br>
-            <a href='https://brettsloan.github.io/' target='_blank'>
-              <button type="button" name="button">Visit Site</button>
-            </a>
+            			<a href='https://brettsloan.github.io/' target='_blank'>
+              				<button type="button" name="button">Visit Site</button>
+            			</a>
 						<br><br><br>
-          </div>
+          			</div>
           <!-- <div class="logo-wrapper">
             <iframe src="https://brettsloan.github.io/Projects/Demoraes%20Music/index.html" class="iframe-website"></iframe>
 						<br><br>
@@ -203,38 +240,45 @@
 				<!-- VIDEO EDITING -->
 				<div id="videoEditing" class="content-logos-wrapper hidden">
 					<div class="prof-pic">
-						<img src="Pics/profPicHeader.jpg" alt="">
+						<img src="Pics/ProfPic4300x300.jpg" alt="">
 					</div>
 					<div class="logo-wrapper">
-						<h3>Editing</h3>
-						<h1>REEL:</h1>
-						<p>Coming Soon...</p>
+						<h1>Videos Portfolio:</h1>
 						<br><br>
 					</div>
+					<div class="logo-wrapper flex-item-2">
+						<a href='https://ytjobs.co/talent/vitrine/44863' target='_blank'>
+							<img class='logos' id="discord-logo" src='Pics/ytJobs.png'></img>
+						</a>
+					</div>
 					<div class="logo-wrapper">
-						<h3>Videos for</h3>
-						<h1>CLIENTELE:</h1>
-						<br><br>
+							<br><br>
+					</div>
+					<div class="logo-wrapper flex-item-2">
+						<iframe class="iframe-youtube-video" src="https://www.youtube.com/embed/4GcjDGtfGX4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+					</div>
+					<div class="logo-wrapper flex-item-2">
+						<iframe class="iframe-youtube-video" src="https://www.youtube.com/embed/zhi-zMzaGX8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 					</div>
 					<div class="logo-wrapper flex-item-2">
 						<iframe class="iframe-youtube-video" src="https://www.youtube.com/embed/rLaKcCft3lY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-						<p>Client: inabox44</p>
+					</div>
+					<div class="logo-wrapper flex-item-2">
+						<iframe class="iframe-youtube-video" src="https://www.youtube.com/embed/FfXKO00zT2k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 					</div>
 					<div class="logo-wrapper flex-item-2">
 						<iframe class="iframe-youtube-video" src="https://www.youtube.com/embed/E5AbumD8ejM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-						<p>Client: inabox44</p>
 					</div>
 					<div class="logo-wrapper flex-item-2">
 						<iframe class="iframe-youtube-video" src="https://www.youtube.com/embed/_VD2uBMkNCc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-						<p>Client: inabox44</p>
-					</div>
-					<br>
-					<div class="logo-wrapper">
-						<h3>Videos of</h3>
-						<h1>MYSELF:</h1>
-						<br><br>
 					</div>
 					<div class="logo-wrapper flex-item-2">
+						<iframe class="iframe-youtube-video" src="https://www.youtube.com/embed/MKFxT5Tdj8o?si=S4efVp24K9Y9fnwi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+					</div>
+					<div class="logo-wrapper flex-item-2">
+						<iframe class="iframe-youtube-video" src="https://www.youtube.com/embed/GTponsmphok?si=zJwTb0--xsx9yTLU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+					</div>
+						<div class="logo-wrapper flex-item-2">
 						<iframe class="iframe-youtube-video" src="https://www.youtube.com/embed/-NF3dF0k2WQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 					</div>
 					<div class="logo-wrapper flex-item-2">
@@ -254,10 +298,6 @@
 					</div>
 					<div class="logo-wrapper flex-item-2">
 						<iframe class="iframe-youtube-video" src="https://www.youtube.com/embed/OukQ5mlBwvc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-					</div>
-
-					<div class="logo-wrapper">
-						<p>Worked alongside Creators such as: <br>PiscesPls, inabox44, Samwitch</p>
 					</div>
 				</div>
 
